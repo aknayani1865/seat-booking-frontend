@@ -1,0 +1,20 @@
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seat.available {
+  background-color: #76d7c4; /* Light green for available seats */
+}
+
+.seat.booked {
+  background-color: #f1948a; /* Light red for booked seats */
+  cursor: not-allowed;
+}
