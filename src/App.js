@@ -4,6 +4,7 @@ import "./App.css";
 import { getSeats, reserveSeats } from "./services/seatService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Seatsymbol from "./components/Seatsymbol";
 
 function App() {
   const [seats, setSeats] = useState([]);
@@ -76,6 +77,10 @@ function App() {
           {/* Show loader text when loading */}
         </div>
       </form>
+      <div className="ak">
+      <Seatsymbol Seatsymbol="booked" />
+      <Seatsymbol Seatsymbol="available" />
+      </div>
       <div className="seat-grid">
         {seats.map((seat) => (
           <Seat key={seat.seatNumber} seat={seat} />
